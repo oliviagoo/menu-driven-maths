@@ -1,7 +1,7 @@
 #menu driven maths
-#version 7
+#version 8
 #olivia g 15/5/20
-#in this version I am adding error handling for the menu option selection
+#in this version I am commenting out print lines that are for testing
 
 #function that forces the user to enter an integer
 def forceint(msg):
@@ -19,7 +19,7 @@ def menu():
         print("{}: press {}.".format(i[0], i[1]),end =" ")
     print()
     opt_choice = input("Choose one of these options: ")
-    print(opt_choice)
+    #print(opt_choice)
     return opt_choice
 
 #putting the operations into functions to make the code easier to read
@@ -46,8 +46,8 @@ MENU_OPTIONS = [["Addition", "a"], ["Subtraction", "s"], ["Multiplication", "m"]
 #integer input
 int_one = forceint("Enter the first integer: ")
 int_two = forceint("Enter the second integer: ")
-print(int_one)
-print(int_two)
+#print(int_one)
+#print(int_two)
 
 while True:
     #choosing a menu option
