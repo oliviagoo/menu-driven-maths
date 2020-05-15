@@ -1,7 +1,17 @@
 #menu driven maths
-#version 5
+#version 6
 #olivia g 15/5/20
-#in this version I am putting parts of the code into functions
+#in this version I am adding error handling for input of the integers
+
+#function that forces the user to enter an integer
+def forceint(msg):
+    while True:
+        try:
+            number = int(input(msg))
+            break
+        except ValueError:
+            print("Please enter a valid whole number.")
+    return number 
 
 #function that takes input from the user for the menu choice
 def menu():
@@ -29,12 +39,13 @@ def division(one, two):
     answer = one / two
     return answer
 
+#main routine
 #constant - operations offered in the menu
 MENU_OPTIONS = [["Addition", "a"], ["Subtraction", "s"], ["Multiplication", "m"], ["Division", "d"], ["Quit", "q"]]
 
 #integer input
-int_one = int(input("Enter the first integer: "))
-int_two = int(input("Enter the second integer: "))
+int_one = forceint("Enter the first integer: ")
+int_two = forceint("Enter the second integer: ")
 print(int_one)
 print(int_two)
 
