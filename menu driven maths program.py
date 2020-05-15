@@ -1,7 +1,7 @@
 #menu driven maths
-#version 6
+#version 7
 #olivia g 15/5/20
-#in this version I am adding error handling for input of the integers
+#in this version I am adding error handling for the menu option selection
 
 #function that forces the user to enter an integer
 def forceint(msg):
@@ -65,6 +65,10 @@ while True:
     elif opt_choice == MENU_OPTIONS[3][1]:
         answer = division(int_one, int_two)
         print("{} / {} = {:.2f}".format(int_one, int_two, answer))
-    else:
+    #ends the loop and finishes the program
+    elif opt_choice == MENU_OPTIONS[4][1]:
         print("Goodbye!")
         break
+    #if it is none of these options, it must be an invalid input
+    else:
+        print("Please choose a valid option")
